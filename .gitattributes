@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+
+*.jsx linguist-detectable=true
+*.js linguist-detectable=true
+
+*.jsx linguist-language=React
+*.json linguist-language=JSON
+*.config.js linguist-language=JavaScript
+
+*.md linguist-documentation
+README.md linguist-documentation
