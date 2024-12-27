@@ -3,15 +3,12 @@
 *.html linguist-language=HTML
 *.css linguist-language=CSS
 *.js linguist-language=JavaScript
-
 *.jsx linguist-detectable=true
 *.js linguist-detectable=true
-*.css linguist-detectable=false
-*.html linguist-detectable=false
-
+*.css linguist-detectable=true
+*.html linguist-detectable=true
 *.jsx linguist-language=React
 *.json linguist-language=JSON
 *.config.js linguist-language=JavaScript
-
-*.md linguist-documentation
-README.md linguist-documentation
+*.md linguist-language=Markdown
+*.md linguist-detectable=true
