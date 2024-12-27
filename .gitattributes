@@ -6,6 +6,8 @@
 
 *.jsx linguist-detectable=true
 *.js linguist-detectable=true
+*.css linguist-detectable=false
+*.html linguist-detectable=false
 
 *.jsx linguist-language=React
 *.json linguist-language=JSON
