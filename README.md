@@ -27,7 +27,7 @@ A simple React application that translates text to Morse code and Morse code to 
 
 To run the application, follow these steps:
 
-1. Clone the repository using `git clone https://github.com/y1hy11/Projects/tree/main/Morse%20Translator
+1. Clone the repository using `git clone https://github.com/y1hy11/Text---Morse-Code-Translator/
 2. Install the dependencies using `npm install`
 3. Start the application using `npm start`
 4. Open your web browser and navigate to `http://localhost:####`
