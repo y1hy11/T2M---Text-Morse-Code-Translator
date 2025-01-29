@@ -1,6 +1,6 @@
 # Text - Morse Code Translator
 
-A simple React application that translates text to Morse code and Morse code to text. The app also allows users to play Morse code audio for the translated text.
+A Modern Vite.js application that translates between text and Morse Code. The app also allows users to play Morse code audio for the translated text.
 
 ## Features
 
