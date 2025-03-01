@@ -79,5 +79,4 @@ export const I18nProvider = ({ children }) => {
   );
 };
 
-export { I18nContext };
-export default I18nProvider;
+export default { I18nContext, I18nProvider };
