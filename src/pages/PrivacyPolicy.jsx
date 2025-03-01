@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/pages/PrivacyPolicy.css';
 
 const PrivacyPolicy = () => {
