@@ -1,0 +1,39 @@
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  color: #3498db;
+  margin: 0;
+  line-height: 1;
+}
+
+.not-found h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 1rem 0;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 500px;
+  margin: 1rem auto 2rem;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #2980b9;
+}

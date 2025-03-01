@@ -1,4 +1,4 @@
-const morseCode = {
+const MorseCode = {
     // English
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
     'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
@@ -17,4 +17,4 @@ const morseCode = {
 
 };
 
-export default morseCode;
+export default MorseCode;
