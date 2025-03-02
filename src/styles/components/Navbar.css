@@ -1,15 +1,20 @@
-/* src/styles/components/Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: var(--header-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo img {
   height: 40px;
+}
+
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
@@ -22,7 +27,7 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: #2c3e50;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.2s ease;
@@ -30,6 +35,46 @@
 
 .nav-links li a:hover {
   color: #3498db;
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.language-select {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+[data-language="ar"] {
+  direction: rtl;
+  font-family: 'Amiri', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -42,9 +87,16 @@
     margin-bottom: 1rem;
   }
 
+  .navbar-nav {
+    margin: 1rem 0;
+  }
+
   .nav-links {
-    width: 100%;
     justify-content: center;
     gap: 1rem;
+  }
+
+  .navbar-controls {
+    justify-content: center;
   }
 }
