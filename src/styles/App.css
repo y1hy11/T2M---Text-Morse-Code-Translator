@@ -1,0 +1,10 @@
+@import './base/variables.css';
+@import './base/utilities.css';
+@import './components/Navbar.css';
+@import './components/Footer.css';
+@import './components/InfoSection.css';
+@import './pages/Contact.css';
+@import './pages/Convert.css';
+@import './pages/Home.css';
+@import './pages/Notfound.css';
+@import './pages/PrivacyPolicy.css';
