@@ -3,6 +3,8 @@
 @import './components/Navbar.css';
 @import './components/Footer.css';
 @import './components/InfoSection.css';
+@import './components/Loader.css';
+@import './components/ErrorBoundary.css';
 @import './pages/Contact.css';
 @import './pages/Convert.css';
 @import './pages/Home.css';
