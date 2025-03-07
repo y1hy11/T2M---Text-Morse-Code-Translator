@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
-import '../styles/pages/Notfound.css';
+import { useTranslation } from 'react-i18next';
 
 const NotFound = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="not-found">
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <h1>{t('error.404')}</h1>
+      <h2>{t('error.pageNotFound')}</h2>
+      <p>{t('error.pageNotFoundDesc')}</p>
       <Link to="/" className="home-link">
-        Return to Home
+        {t('error.returnHome')}
       </Link>
     </div>
   );
