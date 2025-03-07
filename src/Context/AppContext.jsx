@@ -1,6 +1,15 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import i18n from '../utils/i18n';
 
-const AppContext = createContext();
+const initialContext = {
+  isDarkMode: false,
+  toggleTheme: () => {},
+  language: 'en',
+  changeLanguage: () => {}
+};
+
+const AppContext = createContext(initialContext);
 
 export function AppProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -11,8 +20,12 @@ export function AppProvider({ children }) {
 
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem('language');
-    return savedLanguage || 'en'; // Default to English
+    return savedLanguage || 'en';
   });
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -24,26 +37,23 @@ export function AppProvider({ children }) {
   }, [isDarkMode]);
 
   useEffect(() => {
-
     localStorage.setItem('language', language);
-
     document.documentElement.setAttribute('lang', language);
-
-    if (language === 'ar') {
-      document.documentElement.setAttribute('dir', 'rtl');
-    } else {
-      document.documentElement.setAttribute('dir', 'ltr');
-    }
+    document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
   }, [language]);
 
   const toggleTheme = () => {
     setIsDarkMode(prevMode => !prevMode);
   };
 
-  const changeLanguage = (lang) => {
-    setLanguage(lang);
+  const changeLanguage = async (lang) => {
+    try {
+      await i18n.changeLanguage(lang);
+      setLanguage(lang);
+    } catch (error) {
+      console.error('Failed to change language:', error);
+    }
   };
-
 
   const contextValue = {
     isDarkMode,
@@ -62,5 +72,16 @@ export function AppProvider({ children }) {
 export function useAppContext() {
   return useContext(AppContext);
 }
+
+AppContext.propTypes = {
+  isDarkMode: PropTypes.bool,
+  toggleTheme: PropTypes.func,
+  language: PropTypes.string,
+  changeLanguage: PropTypes.func
+};
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default AppContext;
