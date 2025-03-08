@@ -1,5 +1,4 @@
 import MorseTranslator from '../components/morseTranslator';
-import '../styles/pages/Convert.css';
 
 const Convert = () => {
   return (
