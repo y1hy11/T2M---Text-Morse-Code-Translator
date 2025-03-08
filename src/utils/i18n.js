@@ -58,12 +58,17 @@ const resources = {
         message: "Message",
         sendMessage: "Send Message",
         thankYou: "Thank you for your message!",
+        errorMessage: "There was an error sending your message. Please try again.",
+        sending: "Sending...",
         willReply: "We'll get back to you as soon as possible.",
         sendAnother: "Send Another Message",
         otherWays: "Other Ways to Connect",
         visitGithub1: "Visit our ",
         visitGithuba: "GitHub repository ",
-        visitGithub2: "to contribute to the project."
+        visitGithub2: "to contribute to the project.",
+        nameRequired: "Name is required",
+        emailInvalid: "Please enter a valid email address",
+        messageRequired: "Message is required"
       },
       footer: {
         aboutUs: "About Us",
@@ -152,13 +157,18 @@ const resources = {
         email: "Email",
         message: "Message",
         sendMessage: "Envoyer le Message",
+        errorMessage: "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+        sending: "Envoi en cours...",
         thankYou: "Merci pour votre message !",
         willReply: "Nous vous répondrons dès que possible.",
         sendAnother: "Envoyer un Autre Message",
         otherWays: "Autres Moyens de Connexion",
         visitGithub1: "Visitez notre",
         visitGithuba: "dépôt GitHub ",
-        visitGithub2: "pour contribuer au projet."
+        visitGithub2: "pour contribuer au projet.",
+        nameRequired: "Le nom est requis",
+        emailInvalid: "Veuillez entrer une adresse e-mail valide",
+        messageRequired: "Le message est requis"
       },
       footer: {
         aboutUs: "À Propos",
@@ -247,14 +257,18 @@ const resources = {
         email: "البريد الإلكتروني",
         message: "الرسالة",
         sendMessage: "إرسال الرسالة",
+        errorMessage: "حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+        sending: "جارٍ الإرسال...",
         thankYou: "شكراً لرسالتك!",
         willReply: "سنرد عليك في أقرب وقت ممكن.",
         sendAnother: "إرسال رسالة أخرى",
         otherWays: "طرق أخرى للتواصل",
         visitGithub1: "قم بزيارة ",
         visitGithuba: "مستودع GitHub ",
-        visitGithub2: "للمساهمة في المشروع."
-        
+        visitGithub2: "للمساهمة في المشروع.",
+        nameRequired: "الاسم مطلوب",
+        emailInvalid: "يرجى إدخال عنوان بريد إلكتروني صالح",
+        messageRequired: "الرسالة مطلوبة"
       },
       footer: {
         aboutUs: "من نحن",
