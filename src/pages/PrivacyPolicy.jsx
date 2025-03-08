@@ -1,46 +1,48 @@
 import { Link } from 'react-router-dom';
-import '../styles/pages/PrivacyPolicy.css';
+import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="privacy-policy">
-      <h1>Privacy Policy</h1>
+      <h1>{t('privacy.title')}</h1>
       <div className="policy-content">
         <section>
-          <h2>Information We Collect</h2>
+          <h2>{t('privacy.infoWeCollect')}</h2>
           <p>
-            The Morse Code Translator is a client-side application. All translations and operations are performed locally in your browser. We do not collect or store any of your translated text or personal information.
+            {t('footer.aboutText')}
           </p>
         </section>
 
         <section>
-          <h2>Cookies</h2>
+          <h2>{t('privacy.cookies')}</h2>
           <p>
-            This application does not use cookies or similar tracking technologies.
+            {t('privacy.cookiesInfo')}
           </p>
         </section>
 
         <section>
-          <h2>Third-Party Services</h2>
+          <h2>{t('privacy.thirdPartyServices')}</h2>
           <p>
-            We do not use any third-party services that collect user data.
+            {t('privacy.thirdPartyServicesInfo')}
           </p>
         </section>
 
         <section>
-          <h2>Changes to This Policy</h2>
+          <h2>{t('privacy.changes')}</h2>
           <p>
-            We may update our Privacy Policy from time to time. Any changes will be posted on this page.
+            {t('privacy.changesDesc')}
           </p>
           <p>
-            Last updated: {new Date().toLocaleDateString()}
+            {t('privacy.lastUpdated')}: {new Date().toLocaleDateString()}
           </p>
         </section>
 
         <section>
-          <h2>Contact Us</h2>
+          <h2>{t('contact.title')}</h2>
           <p>
-            If you have any questions about this Privacy Policy, please contact us through the <Link to="/contact">Contact page</Link>.
+            {t('privacy.contactDesc')} <Link to="/contact">{t('navigation.contact')}</Link>.
           </p>
         </section>
       </div>
