@@ -6,23 +6,32 @@
 
 .contact-container h1 {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .contact-intro {
   text-align: center;
-  color: #7f8c8d;
+  color: var(--text-light);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
 
+.dark-mode .contact-intro {
+  color: var(--text-dark);
+}
+
 .contact-form {
-  background: #fff;
+  background: var(--background-light);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .contact-form {
+  background: var(--background-dark);
+  box-shadow: 0 3px 10px rgba(231, 231, 231, 0.3);
 }
 
 .form-group {
@@ -33,30 +42,40 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #34495e;
+  color: var(--text-light);
+}
+
+.dark-mode .form-group label {  
+  color: var(--text-dark);  
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--primary-color);
   border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.2s ease;
 }
 
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #3498db;
+  border-color: var(--secondary-color);
 }
 
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background-color: #3498db;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
@@ -65,26 +84,36 @@
   transition: background-color 0.2s ease;
 }
 
+.dark-mode .submit-button {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
 .submit-button:hover {
   background-color: #2980b9;
 }
 
 .form-success {
   text-align: center;
-  background: #fff;
+  background-color: var(--background-light);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+.dark-mode .form-success {
+  background-color: var(--background-dark);
+  box-shadow: 0 3px 10px rgba(231, 231, 231, 0.3);
+}
+
 .form-success h2 {
-  color: #27ae60;
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
 .form-success button {
-  background-color: #3498db;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
   border: none;
   border-radius: 4px;
   padding: 1rem 2rem;
@@ -94,8 +123,20 @@
   transition: background-color 0.2s ease;
 }
 
+.dark-mode .form-success button {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
 .form-success button:hover {
   background-color: #2980b9;
+}
+
+.form-error p {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .additional-contact {
@@ -110,10 +151,140 @@
 }
 
 .additional-contact a {
-  color: #3498db;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 .additional-contact a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 540px;
+    padding: 1.2rem 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-intro {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form,
+  .form-success {
+    padding: 1.2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button,
+  .form-success button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .additional-contact {
+    margin-top: 2rem;
+  }
+  
+  .additional-contact h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .contact-container {
+    padding: 4rem 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .contact-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-intro {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  
+  .contact-form,
+  .form-success {
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 6px;
+  }
+  
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .submit-button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-success h2 {
+    font-size: 1.4rem;
+  }
+  
+  .form-success p {
+    font-size: 0.9rem;
+  }
+  
+  .form-success button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .additional-contact {
+    margin-top: 1.5rem;
+  }
+  
+  .additional-contact h2 {
+    font-size: 1.3rem;
+  }
+  
+  .additional-contact p {
+    font-size: 0.85rem;
+  }
 }
