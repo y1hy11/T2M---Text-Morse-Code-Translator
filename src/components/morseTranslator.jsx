@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import morseCode from '../utils/morseCode';
+import morseCode from '../utils/MorseCode';
 
 function MorseTranslator() {
     const [inputText, setInputText] = useState('');
