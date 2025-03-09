@@ -51,8 +51,12 @@
 }
 
 .feature-card p {
-    color: var(--text-secondary);
+    color: var(--text-light);
     line-height: 1.6;
+}
+
+.dark-mode .feature-card p {
+    color: var(--text-dark);
 }
 
 .morse-info-section {
@@ -87,8 +91,12 @@
 .morse-info-section p {
     line-height: 1.8;
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: var(--text-light);
     margin-bottom: 1.5rem;
+}
+
+.dark-mode .morse-info-section p {
+    color: var(--text-dark);
 }
 
 .morse-info-section ul {
@@ -100,7 +108,11 @@
     margin-bottom: 0.75rem;
     line-height: 1.6;
     font-size: 1.05rem;
-    color: var(--text-secondary);
+    color: var(--text-light);
+}
+
+.dark-mode .morse-info-section li {
+    color: var(--text-dark);
 }
 
 .h2-container {
@@ -121,9 +133,31 @@
     display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .features-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .features-section h2 {
+        margin: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 1.2rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .morse-info-section {
+        padding: 7rem 0 1rem 0;
+        margin-top: 1rem;
+    }
+    
+    .morse-info-content {
+        padding: 0 1rem;
     }
     
     .morse-info-section h2 {
@@ -132,5 +166,60 @@
     
     .morse-info-section h3 {
         font-size: 1.5rem;
+        margin: 2.5rem 0 1.5rem 0;
+    }
+    
+    .morse-info-section p {
+        font-size: 1rem;
+    }
+    
+    .morse-info-section li {
+        font-size: 0.95rem;
+    }
+    
+    .h2-container {
+        gap: 0.5rem;
+    }
+    
+    .h2-container img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section h2 {
+        margin: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .morse-info-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .morse-info-section h3 {
+        font-size: 1.4rem;
+        margin: 3rem 0 2rem 0;
+    }
+    
+    .morse-info-section p {
+        font-size: 0.95rem;
+    }
+    
+    .morse-info-section li {
+        font-size: 0.9rem;
+    }
+    
+    .h2-container {
+        gap: 0.3rem;
+    }
+    
+    .h2-container img {
+        width: 50px;
+        height: 50px;
     }
 }
