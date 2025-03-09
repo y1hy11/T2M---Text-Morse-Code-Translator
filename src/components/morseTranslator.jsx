@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
-import morseCode from '../utils/MorseCode';
+import { useTranslation } from 'react-i18next';
+import morseCode from '../utils/morseCode';
 
 function MorseTranslator() {
+    const { t } = useTranslation();
     const [inputText, setInputText] = useState('');
     const [morseText, setMorseText] = useState('');
     const [isPlaying, setIsPlaying] = useState(false);
@@ -72,19 +74,22 @@ function MorseTranslator() {
 
     return (
         <div>
+            <h1 className='h1-converter'>{t('homePage.appTitle')}</h1>
             <div className="morse-translator">
-                <h1>Text - Morse Code Translator</h1>
-                <h2>{mode === 'text-to-morse' ? 'Text:' : 'Morse Code:'}</h2>
-                <div>
+                <h2>{mode === 'text-to-morse' ? t('translator.enterText') : t('translator.enterMorse')}</h2>
+                <div >
                     <textarea
+                        className="input-text"
                         rows="4"
                         cols="50"
                         value={inputText}
                         onChange={(e) => setInputText(e.target.value)}
-                        placeholder={mode === 'text-to-morse' ? 'Enter text' : 'Enter Morse code'} />
+                        placeholder={mode === 'text-to-morse' ? t('translator.enterText') : t('translator.enterMorse')} />
                 </div>
                 <div className="button-group">
-                    <button onClick={handleTranslate}>{mode === 'text-to-morse' ? 'Translate to Morse' : 'Translate to Text'}</button>
+                    <button onClick={handleTranslate}>
+                        {mode === 'text-to-morse' ? t('translator.translateToMorse') : t('translator.translateToText')}
+                    </button>
                     <button
                         onClick={() => {
                             if (isPlaying) {
@@ -92,16 +97,16 @@ function MorseTranslator() {
                             } else {
                                 playMorseCode(morseText);
                             }
-                        } }
+                        }}
                         disabled={!morseText}
                     >
-                        {isPlaying ? 'Pause Morse Code' : 'Play Morse Code'}
+                        {isPlaying ? t('translator.pauseMorseCode') : t('translator.playMorseCode')}
                     </button>
                     <button onClick={() => setMode(mode === 'text-to-morse' ? 'morse-to-text' : 'text-to-morse')}>
-                        Switch to {mode === 'text-to-morse' ? 'Morse to Text' : 'Text to Morse'}
+                        {t('translator.switchMode')} {mode === 'text-to-morse' ? t('translator.morseToText') : t('translator.textToMorse')}
                     </button>
                 </div>
-                <h2>{mode === 'text-to-morse' ? 'Morse Code:' : 'Text:'}</h2>
+                <h2>{mode === 'text-to-morse' ? t('translator.textToMorse') : t('translator.morseToText')}</h2>
                 <div className="morse-output">{morseText}</div>
             </div>
         </div>
