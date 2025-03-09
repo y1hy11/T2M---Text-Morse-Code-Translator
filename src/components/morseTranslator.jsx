@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import morseCode from '../utils/morseCode';
+import morseCode from '../utils/MorseCode';
 
 function MorseTranslator() {
     const { t } = useTranslation();
