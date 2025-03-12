@@ -53,32 +53,32 @@
   .home-container {
     padding: 1.5rem 1rem;
   }
-  
+
   .hero-section {
     margin: 12.5rem 0;
   }
-  
+
   .hero-section h1 {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
   }
-  
+
   .hero-description {
     font-size: 1rem;
     max-width: 100%;
     margin-bottom: 1.5rem;
   }
-  
+
   .cta-button {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
-  
+
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -88,24 +88,24 @@
   .hero-section {
     margin: 15rem 0;
   }
-  
+
   .hero-section h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
-  
+
   .hero-description {
     font-size: 0.9rem;
     margin-bottom: 1.2rem;
   }
-  
+
   .cta-button {
     padding: 0.7rem 1.3rem;
     font-size: 0.9rem;
   }
-  
+
   .cta-button:hover {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  } 
+  }
 }

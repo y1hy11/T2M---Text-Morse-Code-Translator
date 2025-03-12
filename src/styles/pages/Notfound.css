@@ -50,22 +50,22 @@
   .not-found {
     padding: 9rem 1rem 25rem 1rem;
   }
-  
+
   .not-found h1 {
     font-size: 4rem;
   }
-  
+
   .not-found h2 {
     font-size: 1.8rem;
     margin: 0.8rem 0;
   }
-  
+
   .not-found p {
     font-size: 1rem;
     max-width: 350px;
     margin: 0.8rem auto 1.5rem;
   }
-  
+
   .home-link {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -76,24 +76,24 @@
   .not-found {
     padding: 9rem 1rem 25rem 1rem;
   }
-  
+
   .not-found h1 {
     font-size: 4rem;
   }
-  
+
   .not-found h2 {
     font-size: 1.8rem;
     margin: 0.8rem 0;
   }
-  
+
   .not-found p {
     font-size: 1rem;
     max-width: 350px;
     margin: 0.8rem auto 1.5rem;
   }
-  
+
   .home-link {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
-  } 
+  }
 }

@@ -45,8 +45,8 @@
   color: var(--text-light);
 }
 
-.dark-mode .form-group label {  
-  color: var(--text-dark);  
+.dark-mode .form-group label {
+  color: var(--text-dark);
 }
 
 .form-group input,
@@ -172,118 +172,117 @@
     padding: 1.2rem 0.8rem;
     margin-top: 1rem;
   }
-  
+
   .contact-container h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  
+
   .contact-intro {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .contact-form,
   .form-success {
     padding: 1.2rem;
   }
-  
+
   .form-group {
     margin-bottom: 1rem;
   }
-  
+
   .form-group label {
     font-size: 0.9rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
     padding: 0.7rem;
     font-size: 0.9rem;
   }
-  
+
   .submit-button,
   .form-success button {
     padding: 0.8rem;
     font-size: 1rem;
   }
-  
+
   .additional-contact {
     margin-top: 2rem;
   }
-  
+
   .additional-contact h2 {
     font-size: 1.5rem;
   }
 }
-
 
 @media (max-width: 575px) {
   .contact-container {
     padding: 4rem 0.5rem;
     margin-top: 0.5rem;
   }
-  
+
   .contact-container h1 {
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .contact-intro {
     font-size: 0.85rem;
     margin-bottom: 1.2rem;
     padding: 0 0.5rem;
   }
-  
+
   .contact-form,
   .form-success {
     margin: 2rem;
     padding: 2rem;
     border-radius: 6px;
   }
-  
+
   .form-group {
     margin-bottom: 0.8rem;
   }
-  
+
   .form-group label {
     font-size: 0.85rem;
     margin-bottom: 0.3rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
     padding: 0.6rem;
     font-size: 0.85rem;
   }
-  
+
   .submit-button {
     padding: 0.7rem;
     font-size: 0.9rem;
   }
-  
+
   .form-success h2 {
     font-size: 1.4rem;
   }
-  
+
   .form-success p {
     font-size: 0.9rem;
   }
-  
+
   .form-success button {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
     margin-top: 1rem;
   }
-  
+
   .additional-contact {
     margin-top: 1.5rem;
   }
-  
+
   .additional-contact h2 {
     font-size: 1.3rem;
   }
-  
+
   .additional-contact p {
     font-size: 0.85rem;
   }

@@ -57,26 +57,26 @@
     margin: 4rem auto;
     padding: 0 0.8rem;
   }
-  
+
   .privacy-policy h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
-  
+
   .policy-content {
     padding: 1.2rem;
     border-radius: 6px;
   }
-  
+
   .policy-content section {
     margin-bottom: 1.2rem;
   }
-  
+
   .policy-content h2 {
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .policy-content p {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -85,27 +85,24 @@
 }
 
 @media (max-width: 480px) {
-
-
   .privacy-policy h1 {
     font-size: 1.8rem;
     margin: 1rem 1rem 1rem 1rem;
-}
+  }
 
   .policy-content {
     padding: 1rem 2rem 2rem 2rem;
     margin: 1rem 1rem 1rem;
   }
-  
+
   .policy-content h2 {
     font-size: 1.2rem;
     margin-bottom: 0.6rem;
   }
-  
+
   .policy-content p {
     font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 0.6rem;
   }
-  
 }

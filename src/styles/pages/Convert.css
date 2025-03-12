@@ -16,7 +16,7 @@
   box-shadow: 0 3px 10px rgba(163, 163, 163, 0.2);
 }
 
- .h1-converter {
+.h1-converter {
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 2rem;
@@ -150,26 +150,27 @@ button:disabled {
     margin: 1rem;
     padding: 1rem;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.4rem;
   }
-  
+
   .button-group {
     flex-direction: column;
     max-width: 90%;
   }
-  
+
   button {
     width: 100%;
     min-width: 0;
   }
-  
-  .input-text, .morse-output {
+
+  .input-text,
+  .morse-output {
     max-width: 90%;
     font-size: 1rem;
   }
@@ -180,43 +181,43 @@ button:disabled {
     margin: 2rem auto;
     padding: 0 0.5rem;
   }
-  
+
   .morse-translator {
     margin: 0.5rem;
     padding: 1rem 0.5rem;
   }
-  
+
   h1 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
-  
+
   h2 {
     font-size: 1.3rem;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .button-group {
     flex-direction: column;
     gap: 0.8rem;
     margin: 1rem auto;
   }
-  
+
   button {
     width: 100%;
     min-width: 0;
     padding: 0.7rem 1rem;
     font-size: 0.9rem;
   }
-  
+
   .input-text {
     margin: 1rem auto;
     min-height: 100px;
     padding: 0.8rem;
     font-size: 0.9rem;
   }
-  
+
   .morse-output {
     padding: 1rem;
     font-size: 1rem;
