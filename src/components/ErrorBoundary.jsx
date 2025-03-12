@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error("Error caught by boundary:", error, errorInfo);
   }
 
   render() {
@@ -22,10 +22,10 @@ class ErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <div className="error-content">
-          <h1>{t('error.somethingWrong')}</h1>
-          <p>{t('error.refreshMessage')}</p>
+          <h1>{t("error.somethingWrong")}</h1>
+          <p>{t("error.refreshMessage")}</p>
           <button onClick={() => window.location.reload()}>
-            {t('error.refreshPage')}
+            {t("error.refreshPage")}
           </button>
         </div>
       );
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component {
 
 ErrorBoundary.propTypes = {
   children: PropTypes.node.isRequired,
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 
 const TranslatedErrorBoundary = withTranslation()(ErrorBoundary);
