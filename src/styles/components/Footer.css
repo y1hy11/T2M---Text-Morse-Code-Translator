@@ -87,8 +87,13 @@
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .footer-bottom p {
@@ -122,12 +127,12 @@
   .social-links {
     justify-content: center;
   }
-  
+
   .footer-container {
     padding: 1rem;
     margin-top: 1.5rem;
   }
-  
+
   .footer-section {
     margin-bottom: 1rem;
   }
@@ -137,35 +142,35 @@
   .footer-container {
     padding: 0.8rem;
   }
-  
+
   .footer-grid {
     gap: 1rem;
     margin: 0 auto 1rem;
   }
-  
+
   .footer-section h3 {
     font-size: 1rem;
     margin-bottom: 0.6rem;
   }
-  
+
   .footer-section p {
     font-size: 0.85rem;
     line-height: 1.5;
   }
-  
+
   .footer-links {
     gap: 0.3rem;
   }
-  
+
   .footer-links a {
     font-size: 0.85rem;
   }
-  
+
   .social-links a {
     font-size: 1.2rem;
     padding: 0.3rem;
   }
-  
+
   .footer-bottom p {
     font-size: 0.8rem;
   }

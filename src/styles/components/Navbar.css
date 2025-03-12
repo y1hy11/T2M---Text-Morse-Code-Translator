@@ -79,7 +79,8 @@
   color: var(--text-light);
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .dark-mode .language-select {
@@ -95,7 +96,7 @@
 
 [dir="rtl"] {
   direction: rtl;
-  font-family: 'Amiri', 'Segoe UI', 'Roboto', sans-serif;
+  font-family: "Amiri", "Segoe UI", "Roboto", sans-serif;
 }
 
 .sidebar-toggle {
@@ -173,7 +174,7 @@
   margin-top: 1rem;
 }
 
-.sidebar-theme-toggle, 
+.sidebar-theme-toggle,
 .sidebar-language {
   display: flex;
   align-items: center;
@@ -225,18 +226,18 @@
   .sidebar-toggle {
     display: block;
   }
-  
+
   .desktop-nav,
   .desktop-controls {
     display: none;
   }
-  
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .navbar-logo {
     margin-bottom: 0;
   }
