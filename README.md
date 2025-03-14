@@ -1,9 +1,5 @@
 # Text - Morse Code Translator
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
-![PNPM](https://img.shields.io/badge/pnpm-%3E%3D10.5.2-orange)
-
 A modern web application built with Vite.js that provides real-time translation between text and Morse code, featuring audio playback capabilities and a responsive design.
 
 ## ✨ Features
@@ -34,8 +30,9 @@ A modern web application built with Vite.js that provides real-time translation 
 
 ## 📋 Prerequisites
 
-- Node.js (≥ 14.0.0)
-- pnpm (≥ 10.5.2)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
+![PNPM](https://img.shields.io/badge/pnpm-%3E%3D10.5.2-orange)
 
 ## 🛠️ Installation
 
@@ -43,6 +40,9 @@ A modern web application built with Vite.js that provides real-time translation 
 
 ```bash
 git clone https://github.com/y1hy11/Text---Morse-Code-Translator.git
+```
+
+```bash
 cd Text---Morse-Code-Translator
 ```
 
