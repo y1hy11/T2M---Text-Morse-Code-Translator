@@ -6,6 +6,7 @@ const NotFound = () => {
 
   return (
     <div className="not-found">
+      <div className="background-pattern"></div>
       <h1>{t("error.404")}</h1>
       <h2>{t("error.pageNotFound")}</h2>
       <p>{t("error.pageNotFoundDesc")}</p>

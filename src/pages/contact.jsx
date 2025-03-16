@@ -95,6 +95,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <div className="background-pattern"></div>
       <h1>{t("contact.title")}</h1>
       <p className="contact-intro">{t("contact.intro")}</p>
 

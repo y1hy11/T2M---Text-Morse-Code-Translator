@@ -6,6 +6,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="privacy-policy">
+      <div className="background-pattern"></div>
       <h1>{t("privacy.title")}</h1>
       <div className="policy-content">
         <section>
