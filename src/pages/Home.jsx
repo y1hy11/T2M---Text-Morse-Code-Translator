@@ -7,6 +7,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <div className="background-pattern"></div>
       <section className="hero-section">
         <h1>{t("homePage.appTitle")}</h1>
         <p className="hero-description">{t("homePage.heroDescription")}</p>
