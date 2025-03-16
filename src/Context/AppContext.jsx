@@ -50,10 +50,21 @@ export function AppProvider({ children }) {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
+  const updateDocumentTitle = (lang) => {
+    const title = document.querySelector('title');
+    if (title) {
+      const newTitle = title.getAttribute(`data-${lang}`) || title.getAttribute('data-en');
+      document.title = newTitle;
+    }
+  };
+
   const changeLanguage = async (lang) => {
     try {
       await i18n.changeLanguage(lang);
       setLanguage(lang);
+      updateDocumentTitle(lang); // Add this line to update title
+      document.documentElement.setAttribute("lang", lang);
+      document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
     } catch (error) {
       console.error("Failed to change language:", error);
     }
