@@ -1,8 +1,11 @@
+// Core i18n Imports
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+//Translation resources for all supported language
 const resources = {
+  // English translations
   en: {
     translation: {
       navigation: {
@@ -120,6 +123,7 @@ const resources = {
       },
     },
   },
+  // French translations
   fr: {
     translation: {
       navigation: {
@@ -237,6 +241,7 @@ const resources = {
       },
     },
   },
+  // Arabic translations
   ar: {
     translation: {
       navigation: {
@@ -349,6 +354,7 @@ const resources = {
   },
 };
 
+// i18next configuration and initialization
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
