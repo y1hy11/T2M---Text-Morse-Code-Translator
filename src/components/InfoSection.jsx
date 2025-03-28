@@ -1,11 +1,14 @@
+// HeadImg and i18n Translation Imports
 import HeadImg from "../assets/Head_img.svg";
 import { useTranslation } from "react-i18next";
 
 const InfoSection = () => {
+  // Hook to access the translation function
   const { t } = useTranslation();
 
   return (
     <>
+      {/* Morse Code Information Section */}
       <section className="morse-info-section">
         <div className="morse-info-content">
           <div className="h2-container">
@@ -25,7 +28,11 @@ const InfoSection = () => {
               alt="Morse code icon"
             />
           </div>
+
+          {/* Morse Code Definition */}
           <p>{t("homePage.morseDefinition")}</p>
+
+          {/* Uses of Morse Code Section */}
           <h3>🌍 {t("homePage.usesOfMorse")} 🌍</h3>
           <ul>
             <li>
@@ -51,11 +58,15 @@ const InfoSection = () => {
           </ul>
         </div>
       </section>
+
+      {/* Uses of Morse Code Section */}
       <section className="features-section">
         <h2>
           <i className="bi bi-stars"></i> {t("features.title")}{" "}
           <i className="bi bi-stars"></i>
         </h2>
+
+        {/* Features Grid Layout */}
         <div className="features-grid">
           <div className="feature-card">
             <h3>
@@ -63,12 +74,16 @@ const InfoSection = () => {
             </h3>
             <p>{t("features.textToMorse")}</p>
           </div>
+
+          {/* Morse to Text Feature Card */}
           <div className="feature-card">
             <h3>
               <i className="bi bi-translate"></i> {t("translator.morseToText")}
             </h3>
             <p>{t("features.morseToText")}</p>
           </div>
+
+          {/* Audio Playback Feature Card*/}
           <div className="feature-card">
             <h3>
               <i className="bi bi-volume-up"></i>{" "}
@@ -76,6 +91,8 @@ const InfoSection = () => {
             </h3>
             <p>{t("features.audioPlayback")}</p>
           </div>
+            
+          {/* Reponsive design Feature Card */}
           <div className="feature-card">
             <h3>
               <i className="bi bi-device-hdd"></i> {t("features.title")}
