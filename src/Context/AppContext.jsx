@@ -62,7 +62,7 @@ export function AppProvider({ children }) {
     try {
       await i18n.changeLanguage(lang);
       setLanguage(lang);
-      updateDocumentTitle(lang); // Add this line to update title
+      updateDocumentTitle(lang);
       document.documentElement.setAttribute("lang", lang);
       document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
     } catch (error) {
