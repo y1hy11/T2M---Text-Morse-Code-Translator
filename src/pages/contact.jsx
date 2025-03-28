@@ -1,27 +1,35 @@
+// i18n Translation and useState Imports
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  // Initialize translation hook
   const { t } = useTranslation();
+
+  // Form data state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // Form submission status state
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     error: false,
   });
 
+  // Loading state for submission
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Field-level validation errors
   const [fieldErrors, setFieldErrors] = useState({
     name: false,
     email: false,
     message: false,
   });
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -30,6 +38,7 @@ const Contact = () => {
     }));
   };
 
+  // Check if fields are empty or invalid
   const validateForm = () => {
     const errors = {
       name: !formData.name.trim(),
@@ -42,6 +51,7 @@ const Contact = () => {
     return !Object.values(errors).some((error) => error);
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) {
@@ -50,6 +60,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // Submit form data to Web3Forms API
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -66,6 +77,7 @@ const Contact = () => {
 
       const data = await response.json();
 
+      // Handle successful submission
       if (data.success) {
         setFormStatus({
           submitted: true,
@@ -95,11 +107,16 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      {/* Background Pattern */}
       <div className="background-pattern"></div>
+
+      {/* Page Header */}
       <h1>{t("contact.title")}</h1>
       <p className="contact-intro">{t("contact.intro")}</p>
 
+      {/* Success Message or Contact Form */}
       {formStatus.submitted ? (
+        // Success Message
         <div className="form-success">
           <h2>{t("contact.thankYou")}</h2>
           <p>{t("contact.willReply")}</p>
@@ -110,7 +127,10 @@ const Contact = () => {
           </button>
         </div>
       ) : (
+        // Contact Form
         <form className="contact-form" onSubmit={handleSubmit}>
+         
+          {/* Name Field */}
           <div className="form-group">
             <label htmlFor="name">{t("contact.name")}</label>
             <input
@@ -133,6 +153,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Email Field */}
           <div className="form-group">
             <label htmlFor="email">{t("contact.email")}</label>
             <input
@@ -155,6 +176,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Message Field */}
           <div className="form-group">
             <label htmlFor="message">{t("contact.message")}</label>
             <textarea
@@ -180,6 +202,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Error Message */}
           {formStatus.error && (
             <div className="form-error">
               <p>
@@ -191,6 +214,7 @@ const Contact = () => {
             </div>
           )}
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="submit-button"
@@ -203,6 +227,7 @@ const Contact = () => {
         </form>
       )}
 
+      {/* Additional Contact Information */}
       <div className="additional-contact">
         <h2>{t("contact.otherWays")}</h2>
         <p>
