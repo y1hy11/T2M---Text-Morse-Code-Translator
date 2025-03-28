@@ -1,19 +1,25 @@
+// useState, useEffect and Link  imports
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+
+// LogoImg, Context and i18n Imports
 import NavbarLogo from "../assets/Navbar_logo.svg";
 import { useAppContext } from "../Context/AppContext";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  // Hooks and State Management
   const { t } = useTranslation();
   const { language, changeLanguage, isDarkMode, toggleTheme } = useAppContext();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  // Sidebar toggle handler
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  // Handle Scroll-Based Sidebar Behavior
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -21,7 +27,6 @@ function Navbar() {
       if (currentScrollPos > prevScrollPos && sidebarOpen) {
         setSidebarOpen(false);
       }
-
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -33,16 +38,21 @@ function Navbar() {
   }, [sidebarOpen, prevScrollPos]);
 
   return (
-    <>
+    <> 
+      {/* Desktop Navigation Bar */}
       <nav className="navbar">
         <div className="navbar-logo">
           <Link to="/">
             <img src={NavbarLogo} alt="website logo" />
           </Link>
         </div>
+        
+        {/* Mobile Menu Toggle */}
         <div className="sidebar-toggle" onClick={toggleSidebar}>
           <i className="bi bi-list"></i>
         </div>
+        
+        {/* Desktop Navigation Links */}
         <ul className="nav-links desktop-nav">
           <li>
             <Link to="/">{t("navigation.home")}</Link>
@@ -54,6 +64,8 @@ function Navbar() {
             <Link to="/contact">{t("navigation.contact")}</Link>
           </li>
         </ul>
+        
+        {/* Desktop Controls (Theme & Language) */}
         <div className="navbar-controls desktop-controls">
           <div className="theme-toggle" onClick={toggleTheme}>
             {isDarkMode ? "🌙" : "☀️"}
@@ -70,7 +82,10 @@ function Navbar() {
         </div>
       </nav>
 
+      {/* Mobile Sidebar */}
       <div className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
+       
+        {/* Mobile Navigation Links */}
         <ul className="sidebar-links">
           <li>
             <Link to="/" onClick={toggleSidebar}>
@@ -88,6 +103,8 @@ function Navbar() {
             </Link>
           </li>
         </ul>
+
+        {/* Mobile Controls (Theme & Language) */}
         <div className="sidebar-controls">
           <div className="sidebar-theme-toggle">
             <button onClick={toggleTheme}>
@@ -108,6 +125,8 @@ function Navbar() {
           </div>
         </div>
       </div>
+      
+      {/* Overlay for Mobile Sidebar */}
       {sidebarOpen && (
         <div className="sidebar-overlay" onClick={toggleSidebar}></div>
       )}
