@@ -1,3 +1,4 @@
+/* Loader container*/
 .loader-content {
   position: fixed;
   top: 0;
@@ -12,16 +13,19 @@
   align-items: center;
 }
 
+/* Dark mode background override */
 .dark-mode .loader-content {
   background-color: var(--background-dark);
 }
 
+/* Logo styling and animation*/
 .loader-logo {
   width: 200px;
   height: 200px;
   animation: fadeIn 0.5s ease-in-out infinite alternate;
 }
 
+/* Fade animation keyframes*/
 @keyframes fadeIn {
   0% {
     opacity: 0.5;
