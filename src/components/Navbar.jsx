@@ -37,8 +37,49 @@ function Navbar() {
     };
   }, [sidebarOpen, prevScrollPos]);
 
+  // SVG icons as components for theme toggle
+  const MoonIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  );
+
+  const SunIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  );
+
   return (
-    <> 
+    <>
       {/* Desktop Navigation Bar */}
       <nav className="navbar">
         <div className="navbar-logo">
@@ -46,12 +87,12 @@ function Navbar() {
             <img src={NavbarLogo} alt="website logo" />
           </Link>
         </div>
-        
+
         {/* Mobile Menu Toggle */}
         <div className="sidebar-toggle" onClick={toggleSidebar}>
           <i className="bi bi-list"></i>
         </div>
-        
+
         {/* Desktop Navigation Links */}
         <ul className="nav-links desktop-nav">
           <li>
@@ -64,11 +105,11 @@ function Navbar() {
             <Link to="/contact">{t("navigation.contact")}</Link>
           </li>
         </ul>
-        
+
         {/* Desktop Controls (Theme & Language) */}
         <div className="navbar-controls desktop-controls">
           <div className="theme-toggle" onClick={toggleTheme}>
-            {isDarkMode ? "🌙" : "☀️"}
+            {isDarkMode ? <MoonIcon /> : <SunIcon />}
           </div>
           <select
             value={language}
@@ -84,7 +125,6 @@ function Navbar() {
 
       {/* Mobile Sidebar */}
       <div className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
-       
         {/* Mobile Navigation Links */}
         <ul className="sidebar-links">
           <li>
@@ -107,10 +147,16 @@ function Navbar() {
         {/* Mobile Controls (Theme & Language) */}
         <div className="sidebar-controls">
           <div className="sidebar-theme-toggle">
-            <button onClick={toggleTheme}>
-              {isDarkMode
-                ? `🌙 ${t("theme.darkMode")}`
-                : `☀️ ${t("theme.lightMode")}`}
+            <button onClick={toggleTheme} className="theme-button-toggle">
+              {isDarkMode ? (
+                <>
+                  <MoonIcon /> {t("theme.darkMode")}
+                </>
+              ) : (
+                <>
+                  <SunIcon /> {t("theme.lightMode")}
+                </>
+              )}
             </button>
           </div>
           <div className="sidebar-language">
@@ -125,7 +171,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      
+
       {/* Overlay for Mobile Sidebar */}
       {sidebarOpen && (
         <div className="sidebar-overlay" onClick={toggleSidebar}></div>

@@ -190,6 +190,7 @@
   margin-top: 1rem;
 }
 
+/* Sidebar theme toggle and language select styles */
 .sidebar-theme-toggle,
 .sidebar-language {
   display: flex;
@@ -206,13 +207,17 @@
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-around;
 }
 
+/* Dark mode theme toggle button */
 .dark-mode .sidebar-theme-toggle button {
   background: var(--background-dark);
   color: var(--text-dark);
 }
 
+/* Sidebar language select styles */
 .sidebar-language select {
   padding: 0.5rem;
   margin: 0 auto;
@@ -225,6 +230,7 @@
   width: 100%;
 }
 
+/* Dark mode sidebar language select */
 .dark-mode .sidebar-language select {
   background-color: var(--background-dark);
   color: var(--text-dark);

@@ -1,3 +1,4 @@
+/* Main container for Home page Styling*/
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,17 +6,20 @@
 
 }
 
+/* Hero section styling */
 .hero-section {
   text-align: center;
   margin: 4rem 0;
 }
 
+/* Hero section heading styling */
 .hero-section h1 {
   font-size: 2.8rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
 
+/* Hero description text*/
 .hero-description {
   font-size: 1.2rem;
   color: var(--text-light);
@@ -24,10 +28,12 @@
   line-height: 1.6;
 }
 
+/* Dark mode description text override */
 .dark-mode .hero-description {
   color: var(--text-dark);
 }
 
+/* Call-to-action button styling */
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
@@ -40,16 +46,19 @@
   transition: all 0.3s ease;
 }
 
+/* Dark mode button override */
 .dark-mode .cta-button {
   color: var(--text-dark);
 }
 
+/* Call-to-action button hover state */
 .cta-button:hover {
   background-color: #2980b9;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Tablet Responsive Styles */
 @media screen and (max-width: 768px) {
   .home-container {
     padding: 1.5rem 1rem;
@@ -85,6 +94,7 @@
   }
 }
 
+/* Mobile Responsive Styles */
 @media screen and (max-width: 480px) {
   .hero-section {
     margin: 15rem 0;

@@ -1,9 +1,11 @@
+/* Main container for cantact page styling*/
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
+/* Page title styling */
 .contact-container h1 {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -11,6 +13,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Introductory text with theme support */
 .contact-intro {
   text-align: center;
   color: var(--text-light);
@@ -18,10 +21,12 @@
   line-height: 1.6;
 }
 
+/* Dark mode override for introductory text */
 .dark-mode .contact-intro {
   color: var(--text-dark);
 }
 
+/* Contact form container styling */
 .contact-form {
   background: var(--background-light);
   padding: 2rem;
@@ -29,15 +34,18 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark mode override for contact form */
 .dark-mode .contact-form {
   background: var(--background-dark);
   box-shadow: 0 3px 10px rgba(231, 231, 231, 0.3);
 }
 
+/* Form group styling for input fields */
 .form-group {
   margin-bottom: 1.5rem;
 }
 
+/* Form label styling */
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
@@ -45,10 +53,12 @@
   color: var(--text-light);
 }
 
+/* Dark mode override for form labels */
 .dark-mode .form-group label {
   color: var(--text-dark);
 }
 
+/* Input and textarea styling */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -59,18 +69,21 @@
   transition: border-color 0.2s ease;
 }
 
+/* Dark mode override for input and textarea */
 .dark-mode .form-group input,
 .dark-mode .form-group textarea {
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
 
+/* Focus states for form controls */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--secondary-color);
 }
 
+/* Submit button Styling */
 .submit-button {
   width: 100%;
   padding: 1rem;
@@ -84,15 +97,18 @@
   transition: background-color 0.2s ease;
 }
 
+/* Dark mode override for submit button */
 .dark-mode .submit-button {
   background-color: var(--secondary-color);
   color: var(--text-dark);
 }
 
+/* Hover state for submit button */
 .submit-button:hover {
   background-color: #2980b9;
 }
 
+/* Success message container */
 .form-success {
   text-align: center;
   background-color: var(--background-light);
@@ -101,16 +117,19 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark mode override for success message */
 .dark-mode .form-success {
   background-color: var(--background-dark);
   box-shadow: 0 3px 10px rgba(231, 231, 231, 0.3);
 }
 
+/* Success message text styling */
 .form-success h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
+/* Success message button */
 .form-success button {
   background-color: var(--secondary-color);
   color: var(--text-light);
@@ -123,15 +142,18 @@
   transition: background-color 0.2s ease;
 }
 
+/* Dark mode override for success message button */
 .dark-mode .form-success button {
   background-color: var(--secondary-color);
   color: var(--text-dark);
 }
 
+/* Hover state for success message button */
 .form-success button:hover {
   background-color: #2980b9;
 }
 
+/* Error message styling */
 .form-error p {
   color: #dc3545;
   font-size: 1rem;
@@ -139,33 +161,39 @@
   text-align: center;
 }
 
+/* Additional contact information section */
 .additional-contact {
   margin-top: 3rem;
   text-align: center;
 }
 
+/* Dark mode override for additional contact section */
 .additional-contact h2 {
   font-size: 1.8rem;
   color: #2c3e50;
   margin-bottom: 1rem;
 }
 
+/* Additional Contact Links styling*/
 .additional-contact a {
   color: var(--secondary-color);
   text-decoration: none;
 }
 
+/* Dark mode override for additional contact links */
 .additional-contact a:hover {
   text-decoration: none;
   color: var(--primary-color);
 }
 
+/* Field level error messages*/
 .field-error {
   color: #dc3545;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
 
+/* Tablet reponsive  styles*/
 @media (max-width: 768px) {
   .contact-container {
     max-width: 540px;
@@ -217,6 +245,7 @@
   }
 }
 
+/* Mobile responsive styles*/
 @media (max-width: 575px) {
   .contact-container {
     padding: 4rem 0.5rem;
