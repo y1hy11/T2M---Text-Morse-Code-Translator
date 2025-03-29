@@ -1,3 +1,4 @@
+/* Main footer container with theme support */
 .footer-container {
   background-color: var(--background-light);
   color: var(--text-light);
@@ -7,12 +8,17 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark mode container override */
 .dark-mode .footer-container {
   background-color: var(--background-dark);
   color: var(--text-dark);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 
+  Grid layout for footer sections
+  Auto-fit columns for responsive design
+*/
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -21,37 +27,47 @@
   margin: 0 auto 2rem;
 }
 
+/* Section headings */
 .footer-section h3 {
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
+/* Section paragraph text */
 .footer-section p {
   line-height: 1.6;
 }
 
+/* Footer links container*/
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Footer link styling */
 .footer-links a {
   color: var(--text-light);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
+/* Dark mode link override */
 .dark-mode .footer-links a {
   color: var(--text-dark);
 }
 
+/* 
+  Social media links container
+  Horizontal layout with spacing
+ */
 .social-links {
   display: flex;
   gap: 1rem;
 }
 
+/* Individual social link styling */
 .social-links a {
   color: var(--text-light);
   text-decoration: none;
@@ -60,15 +76,18 @@
   font-size: 1.5rem;
 }
 
+/* Dark mode social links override */
 .dark-mode .social-links a {
   color: var(--text-dark);
 }
 
+/* Hover states for all links */
 .footer-links a:hover,
 .social-links a:hover {
   color: var(--secondary-color);
 }
 
+/* Bottom footer section */
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -76,16 +95,19 @@
   margin: 0 auto;
 }
 
+/* Dark mode border override */
 .dark-mode .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Animated heart icon styling */
 .text-danger {
   color: #e74c3c;
   animation: heartbeat 1.5s infinite;
   display: inline-block;
 }
 
+/* Heartbeat animation keyframes */
 @keyframes heartbeat {
   0%,
   100% {
@@ -96,19 +118,23 @@
   }
 }
 
+/* Bottom section paragraph styling */
 .footer-bottom p {
   margin: 0.5rem 0;
 }
 
+/* Bottom section links styling */
 .footer-bottom a {
   color: var(--secondary-color);
   text-decoration: none;
 }
 
+/* Bottom section link hover */
 .footer-bottom a:hover {
   color: var(--primary-color);
 }
 
+/* Tablet and smaller devices layout adjustments */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -138,6 +164,7 @@
   }
 }
 
+/* Mobile devices layout adjustments */
 @media (max-width: 480px) {
   .footer-container {
     padding: 0.8rem;
