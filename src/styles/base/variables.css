@@ -1,3 +1,7 @@
+/*
+  Global CSS Variables
+  Defines the application's color palette and theming variables
+*/
 :root {
   --primary-color: #34495e;
   --secondary-color: #3498db;

@@ -1,13 +1,20 @@
+/* Theme-based body styles */
 body {
   background-color: var(--background-light);
   color: var(--text-light);
 }
 
+/* Dark mode overrides */
 body.dark-mode {
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
 
+/* 
+  Animated background pattern 
+  Creates a subtle, moving decorative element
+  Z-index ensures it stays behind content
+*/
 .background-pattern {
   position: fixed;
   top: 0;
@@ -25,6 +32,11 @@ body.dark-mode {
   transform: rotate(5deg)
 }
 
+/* 
+  Background pattern animation
+  Creates continuous horizontal scrolling effect
+  50s duration provides smooth, subtle movement
+*/
 @keyframes scrollPattern {
   from {
     background-position: 0 0, 100px 0;
