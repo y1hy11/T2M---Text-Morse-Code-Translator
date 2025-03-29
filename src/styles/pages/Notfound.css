@@ -1,8 +1,10 @@
+/* Main container styles for the Not Found page */
 .not-found {
   text-align: center;
   padding: 4rem 1rem;
 }
 
+/* Large 404 Heading*/
 .not-found h1 {
   font-size: 6rem;
   color: var(--text-light);
@@ -10,20 +12,24 @@
   line-height: 1;
 }
 
+/* Dark mode heading override */
 .dark-mode .not-found h1 {
   color: var(--text-secondary);
 }
 
+/* Secondary heading styles */
 .not-found h2 {
   font-size: 2.5rem;
   color: var(--text-light);
   margin: 1rem 0;
 }
 
+/* Dark mode secondary heading override */
 .dark-mode .not-found h2 {
   color: var(--text-secondary);
 }
 
+/* Error description text */
 .not-found p {
   font-size: 1.2rem;
   color: var(--text-secondary);
@@ -31,6 +37,7 @@
   margin: 1rem auto 2rem;
 }
 
+/* Return to home link/button */
 .home-link {
   display: inline-block;
   padding: 1rem 2rem;
@@ -42,10 +49,15 @@
   transition: background-color 0.3s ease;
 }
 
+/* Link/Button hover state */
 .home-link:hover {
   background-color: #2980b9;
 }
 
+/* 
+  Tablet and smaller devices
+  Adjusts spacing and font sizes for better mobile display
+*/
 @media (max-width: 767px) {
   .not-found {
     padding: 9rem 1rem 25rem 1rem;
@@ -72,6 +84,10 @@
   }
 }
 
+/* 
+  Mobile devices
+  Further refinements for smallest screens
+*/
 @media (max-width: 480px) {
   .not-found {
     padding: 9rem 1rem 25rem 1rem;

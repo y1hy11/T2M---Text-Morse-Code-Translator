@@ -1,3 +1,4 @@
+/* Main Error Container */
 .error-content {
   background-color: var(--background-light);
   display: flex;
@@ -9,24 +10,29 @@
   text-align: center;
 }
 
+/* Dark mode background override */
 .dark-mode .error-content {
   background-color: var(--background-dark);
 }
 
+/* Error heading styles */
 .error-content h1 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
+/* Error Message Styles*/
 .error-content p {
   color: var(--text-light);
   margin-bottom: 2rem;
 }
 
+/* Dark mode text color override */
 .dark-mode .error-content p {
   color: var(--text-dark);
 }
 
+/* Refresh button styles */
 .error-content button {
   padding: 0.8rem 1.5rem;
   background-color: var(--secondary-color);
@@ -38,11 +44,13 @@
   transition: background-color 0.3s ease;
 }
 
+/* Dark mode button text color override */
 .dark-mode .error-content button {
   background-color: var(--secondary-color);
   color: var(--text-dark);
 }
 
+/* Button hover state */
 .error-content button:hover {
   background-color: #2980b9;
 }
