@@ -1,9 +1,11 @@
+/* Main container for convert page*/
 .convert-page {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* Translator component container styling with theme support  */
 .convert-page .morse-translator {
   background: var(--background-light);
   padding: 2rem;
@@ -11,11 +13,13 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark mode override for translator component */
 .dark-mode .convert-page .morse-translator {
   background: var(--background-dark);
   box-shadow: 0 3px 10px rgba(163, 163, 163, 0.2);
 }
 
+/* Heading styles for the translator component */
 .h1-converter {
   color: var(--primary-color);
   text-align: center;
@@ -23,6 +27,7 @@
   font-size: 2.5rem;
 }
 
+/* main title styling */
 .morse-translator h2 {
   color: var(--primary-color);
   text-align: center;
@@ -30,6 +35,7 @@
   margin-bottom: 1rem;
 }
 
+/* Button styling */
 button {
   background-color: var(--background-light);
   color: var(--primary-color);
@@ -44,20 +50,24 @@ button {
   text-align: center;
 }
 
+/* Dark mode override for button styling */
 .dark-mode button {
   background-color: var(--background-dark);
   color: var(--primary-color);
 }
 
+/* Button hover effect */
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Dark mode button hover effect */
 .dark-mode button:hover {
   box-shadow: 0 2px 4px rgba(163, 163, 163, 0.2);
 }
 
+/* Button active effect */
 button:disabled {
   background: #bdc3c7;
   cursor: not-allowed;
@@ -65,11 +75,13 @@ button:disabled {
   box-shadow: none;
 }
 
+/* Dark mode button active effect */
 .dark-mode button:disabled {
   background-color: #7c7c7c;
   color: var(--primary-color);
 }
 
+/* Button group styling for layout */
 .button-group {
   display: flex;
   gap: 1rem;
@@ -78,26 +90,31 @@ button:disabled {
   max-width: 45rem;
 }
 
+/* button's group first child styling */
 .button-group button:first-child {
   background: var(--background-light);
   color: var(--primary-color);
 }
 
+/* Dark mode override for button group and button's first child styling */
 .dark-mode .button-group button:first-child {
   background: var(--background-dark);
   color: var(--primary-color);
 }
 
+/* button's group last child styling */
 .button-group button:last-child {
   background: var(--background-light);
   color: var(--primary-color);
 }
 
+/* Dark mode override for button group and button's last child styling */
 .dark-mode .button-group button:last-child {
   background: var(--background-dark);
   color: var(--primary-color);
 }
 
+/* input text styling */
 .input-text {
   background: var(--background-light);
   color: var(--text-light);
@@ -114,17 +131,20 @@ button:disabled {
   transition: border-color 0.3s ease;
 }
 
+/* Dark mode override for input text styling */
 .dark-mode .input-text {
   background: var(--background-dark);
   color: var(--text-dark);
   border-color: var(--primary-color);
 }
 
+/* input text focus effect */
 .input-text:focus {
   outline: none;
   border-color: var(--secondary-color);
 }
 
+/* Output area styling  */
 .morse-output {
   color: var(--text-light);
   padding: 1.5rem;
@@ -140,11 +160,13 @@ button:disabled {
   max-width: 45rem;
 }
 
+/* Dark mode override for output area styling */
 .dark-mode .morse-output {
   background: var(--background-dark);
   color: var(--text-dark);
 }
 
+/* Tablet reponsive styles*/
 @media (max-width: 767px) {
   .morse-translator {
     margin: 1rem;
@@ -176,6 +198,7 @@ button:disabled {
   }
 }
 
+/* Mobile responsive styles*/
 @media (max-width: 575px) {
   .convert-page {
     margin: 2rem auto;

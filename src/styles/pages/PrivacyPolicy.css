@@ -1,9 +1,11 @@
+/* Main container for privacypolicy page styling*/
 .privacy-policy {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* Page title styling*/
 .privacy-policy h1 {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -11,6 +13,7 @@
   margin-bottom: 2rem;
 }
 
+/* Content container with theme support */
 .policy-content {
   background: var(--background-light);
   padding: 2rem;
@@ -18,40 +21,48 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark mode content container override */
 .dark-mode .policy-content {
   background: var(--background-dark);
   box-shadow: 0 3px 10px rgba(204, 204, 204, 0.08);
 }
 
+/* Section spacing */
 .policy-content section {
   margin-bottom: 2rem;
 }
 
+/* Section headings */
 .policy-content h2 {
   font-size: 1.8rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
+/* Paragraph text with theme support */
 .policy-content p {
   color: var(--text-light);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
+/* Dark mode text override */
 .dark-mode .policy-content p {
   color: var(--text-dark);
 }
 
+/* Link styling */
 .policy-content a {
   color: var(--secondary-color);
   text-decoration: none;
 }
 
+/* Link hover state */
 .policy-content a:hover {
   color: var(--primary-color);
 }
 
+/* Tablet Responsive Styles */
 @media (max-width: 767px) {
   .privacy-policy {
     margin: 4rem auto;
@@ -84,6 +95,7 @@
   }
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 480px) {
   .privacy-policy h1 {
     font-size: 1.8rem;
