@@ -74,6 +74,18 @@ const Contact = () => {
           subject: "New Contact Form Submission - Morse Code Translator",
         }),
       });
+      /** For API Key Configurations, use the following two options to set it in your environment:
+       * Option 1: Create a .env file in the root of your project and add the line:
+       *     WEB3FORMS_API_KEY=your_api_key_here
+       * 
+       * Option 2: Set the environment variable in your hosting platform (Vercel, Netlify...) as an environment variable.
+       *   - Vercel: Project settings > Environment variables
+       *   - Netlify: Site settings > Build & deploy > Environment variables
+       *   - Heroku: Settings > Config Vars
+
+       * Make sure to make this sensitive information private and do not expose it in your codebase.
+       * Get your API key from Web3Forms: https://web3forms.com
+      **/
 
       const data = await response.json();
 
